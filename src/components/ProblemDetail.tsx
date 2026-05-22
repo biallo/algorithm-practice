@@ -5,6 +5,29 @@ type ProblemDetailProps = {
   problem: PracticeProblem;
 };
 
+function renderInlineCode(text: string) {
+  return text.split(/(`[^`]+`)/g).map((part, index) => {
+    if (part.startsWith("`") && part.endsWith("`")) {
+      return <code key={`${part}-${index}`}>{part.slice(1, -1)}</code>;
+    }
+
+    return part;
+  });
+}
+
+function renderPromptText(text: string) {
+  return text.split("\n\n").map((paragraph, paragraphIndex) => (
+    <p key={`${paragraph}-${paragraphIndex}`}>
+      {paragraph.split("\n").map((line, lineIndex) => (
+        <span key={`${line}-${lineIndex}`}>
+          {lineIndex > 0 ? <br /> : null}
+          {renderInlineCode(line)}
+        </span>
+      ))}
+    </p>
+  ));
+}
+
 export function ProblemDetail({ problem }: ProblemDetailProps) {
   return (
     <main className="detail" aria-labelledby="problem-title">
@@ -22,9 +45,7 @@ export function ProblemDetail({ problem }: ProblemDetailProps) {
 
       <section className="prompt-section" aria-labelledby="prompt-title">
         <h2 id="prompt-title">Prompt</h2>
-        <div className="rich-text">
-          <p>{problem.description}</p>
-        </div>
+        <div className="rich-text">{renderPromptText(problem.description)}</div>
 
         <div className="examples-block">
           <h3>Examples</h3>
@@ -34,7 +55,9 @@ export function ProblemDetail({ problem }: ProblemDetailProps) {
                 className="example-card"
                 key={`${example.input}-${index}`}
               >
-                <h4>Example {index + 1}</h4>
+                {problem.examples.length > 1 ? (
+                  <h4>Example {index + 1}</h4>
+                ) : null}
                 <dl>
                   <div>
                     <dt>Input</dt>
