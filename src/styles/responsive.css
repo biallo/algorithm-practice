@@ -1,0 +1,82 @@
+@media (max-width: 900px) {
+  body {
+    overflow: auto;
+  }
+
+  .app-shell {
+    height: auto;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .sidebar,
+  .detail,
+  .empty-state {
+    border-radius: 0;
+    height: auto;
+    min-height: auto;
+  }
+
+  .sidebar {
+    border-bottom: 1px solid var(--border);
+    border-right: 0;
+  }
+
+  .detail,
+  .empty-state {
+    margin-top: 0;
+  }
+
+  .field.problem-select {
+    display: grid;
+  }
+
+  .problem-list {
+    display: none;
+  }
+
+  .detail__head {
+    display: grid;
+  }
+
+  .detail__metrics {
+    justify-items: start;
+  }
+
+  .prompt-section {
+    padding: 18px 0;
+  }
+
+  .rich-text {
+    padding-left: 12px;
+  }
+
+  .approach-selector {
+    padding: 14px;
+  }
+
+  .approach-header {
+    display: block;
+  }
+
+  .approach-tabs {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .detail {
+    padding: 20px;
+  }
+
+  .code-panel__header {
+    align-items: start;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,126 @@
+.detail {
+  background: var(--panel);
+  border: 0;
+  border-radius: 0;
+  height: 100vh;
+  min-height: 0;
+  min-width: 0;
+  overflow: auto;
+  padding: 28px;
+}
+
+.detail__head {
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+
+.detail__head h1 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  letter-spacing: 0;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.detail__metrics {
+  align-items: end;
+  color: var(--muted);
+  display: grid;
+  font-size: 0.86rem;
+  gap: 4px;
+  justify-items: end;
+  white-space: nowrap;
+}
+
+.prompt-section {
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  gap: 18px;
+  padding: 24px 0;
+}
+
+.prompt-section h2 {
+  color: var(--ink);
+  font-size: 1.06rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.rich-text {
+  border-left: 3px solid #93c5fd;
+  display: grid;
+  gap: 12px;
+  padding-left: 16px;
+}
+
+.rich-text p {
+  color: #46515f;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.requirements-block {
+  display: grid;
+  gap: 10px;
+}
+
+.requirements-block h3 {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.requirements-block ul {
+  display: grid;
+  gap: 7px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.requirements-block li {
+  color: #46515f;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding-left: 18px;
+  position: relative;
+}
+
+.requirements-block li::before {
+  background: var(--blue);
+  border-radius: 50%;
+  content: "";
+  height: 6px;
+  left: 0;
+  position: absolute;
+  top: 0.72em;
+  width: 6px;
+}
+
+.empty-state {
+  align-content: center;
+  background: var(--panel);
+  border: 0;
+  border-radius: 0;
+  display: grid;
+  justify-items: center;
+  height: 100vh;
+  min-height: 0;
+  padding: 28px;
+  text-align: center;
+}
+
+.empty-state h2 {
+  margin: 0;
+}
+
+.empty-state p:not(.eyebrow) {
+  color: var(--muted);
+}

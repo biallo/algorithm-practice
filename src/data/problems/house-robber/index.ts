@@ -1,0 +1,22 @@
+import type { PracticeProblem } from "../../problemTypes";
+import javascript from "./solutions/main.js?raw";
+import typescript from "./solutions/main.ts?raw";
+
+export const problem: PracticeProblem = {
+  id: `house-robber`,
+  title: `House Robber`,
+  difficulty: `Medium`,
+  category: `Dynamic Programming`,
+  description: `Return the maximum money you can rob without robbing adjacent houses.`,
+  points: [
+    `At each house, choose between skipping it and robbing it.`,
+    `Only two previous states are needed.`,
+  ],
+  solutions: [
+    {
+      title: "Take or skip DP",
+      javascript: javascript.trim(),
+      typescript: typescript.trim(),
+    },
+  ],
+};
