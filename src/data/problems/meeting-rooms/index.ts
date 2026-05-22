@@ -1,6 +1,6 @@
 import type { PracticeProblem } from "../../problemTypes";
-import javascript from "./solutions/main.js?raw";
-import typescript from "./solutions/main.ts?raw";
+import javascript from "./solutions/sort-and-detect-overlap.js?raw";
+import typescript from "./solutions/sort-and-detect-overlap.ts?raw";
 
 export const problem: PracticeProblem = {
   id: `meeting-rooms`,
@@ -8,6 +8,13 @@ export const problem: PracticeProblem = {
   difficulty: `Easy`,
   category: `Intervals`,
   description: `Return true if a person can attend every meeting interval.`,
+  examples: [
+    {
+      input: "intervals = [[0,30],[5,10],[15,20]]",
+      output: "false",
+      explanation: "The meeting [5,10] overlaps with [0,30].",
+    },
+  ],
   points: [
     `Sort meetings by start time.`,
     `Any start before the previous end means a conflict.`,

@@ -26,6 +26,36 @@ export function ProblemDetail({ problem }: ProblemDetailProps) {
           <p>{problem.description}</p>
         </div>
 
+        <div className="examples-block">
+          <h3>Examples</h3>
+          <div className="example-list">
+            {problem.examples.map((example, index) => (
+              <article
+                className="example-card"
+                key={`${example.input}-${index}`}
+              >
+                <h4>Example {index + 1}</h4>
+                <dl>
+                  <div>
+                    <dt>Input</dt>
+                    <dd>{example.input}</dd>
+                  </div>
+                  <div>
+                    <dt>Output</dt>
+                    <dd>{example.output}</dd>
+                  </div>
+                  {example.explanation ? (
+                    <div>
+                      <dt>Explanation</dt>
+                      <dd>{example.explanation}</dd>
+                    </div>
+                  ) : null}
+                </dl>
+              </article>
+            ))}
+          </div>
+        </div>
+
         <div className="requirements-block">
           <h3>Requirements</h3>
           <ul>

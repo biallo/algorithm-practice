@@ -1,6 +1,6 @@
 import type { PracticeProblem } from "../../problemTypes";
-import javascript from "./solutions/main.js?raw";
-import typescript from "./solutions/main.ts?raw";
+import javascript from "./solutions/take-or-skip-dp.js?raw";
+import typescript from "./solutions/take-or-skip-dp.ts?raw";
 
 export const problem: PracticeProblem = {
   id: `house-robber`,
@@ -8,6 +8,13 @@ export const problem: PracticeProblem = {
   difficulty: `Medium`,
   category: `Dynamic Programming`,
   description: `Return the maximum money you can rob without robbing adjacent houses.`,
+  examples: [
+    {
+      input: "nums = [2,7,9,3,1]",
+      output: "12",
+      explanation: "Rob houses with amounts 2, 9, and 1.",
+    },
+  ],
   points: [
     `At each house, choose between skipping it and robbing it.`,
     `Only two previous states are needed.`,

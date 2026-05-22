@@ -63,6 +63,68 @@
   margin: 0;
 }
 
+.examples-block {
+  display: grid;
+  gap: 10px;
+}
+
+.examples-block h3 {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.example-list {
+  display: grid;
+  gap: 10px;
+}
+
+.example-card {
+  background: #f8fafc;
+  border: 1px solid #dce3ed;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+}
+
+.example-card h4 {
+  color: var(--ink);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.example-card dl {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.example-card dl div {
+  display: grid;
+  gap: 3px;
+}
+
+.example-card dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.example-card dd {
+  color: #46515f;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
 .requirements-block {
   display: grid;
   gap: 10px;

@@ -22,12 +22,19 @@ export type PracticeSolution = SolutionCode & {
   title: string;
 };
 
+export type PracticeExample = {
+  input: string;
+  output: string;
+  explanation?: string;
+};
+
 export type PracticeProblem = {
   id: string;
   title: string;
   difficulty: Difficulty;
   category: ProblemCategory;
   description: string;
+  examples: PracticeExample[];
   points: string[];
   solutions: PracticeSolution[];
 };

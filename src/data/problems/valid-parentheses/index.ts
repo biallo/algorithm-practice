@@ -1,6 +1,6 @@
 import type { PracticeProblem } from "../../problemTypes";
-import javascript from "./solutions/main.js?raw";
-import typescript from "./solutions/main.ts?raw";
+import javascript from "./solutions/stack-of-expected-closers.js?raw";
+import typescript from "./solutions/stack-of-expected-closers.ts?raw";
 
 export const problem: PracticeProblem = {
   id: `valid-parentheses`,
@@ -8,6 +8,13 @@ export const problem: PracticeProblem = {
   difficulty: `Easy`,
   category: `Stack`,
   description: `Return true if every opening bracket is closed by the same type of bracket in the correct order.`,
+  examples: [
+    {
+      input: 's = "()[]{}"',
+      output: "true",
+      explanation: "Every opening bracket is closed in the correct order.",
+    },
+  ],
   points: [
     `Push opening brackets onto a stack.`,
     `For closing brackets, compare against the last opening bracket.`,

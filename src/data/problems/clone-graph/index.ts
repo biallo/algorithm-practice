@@ -1,6 +1,8 @@
 import type { PracticeProblem } from "../../problemTypes";
-import javascript from "./solutions/main.js?raw";
-import typescript from "./solutions/main.ts?raw";
+import bfsJavascript from "./solutions/bfs.js?raw";
+import bfsTypescript from "./solutions/bfs.ts?raw";
+import javascript from "./solutions/dfs-with-memoization.js?raw";
+import typescript from "./solutions/dfs-with-memoization.ts?raw";
 
 export const problem: PracticeProblem = {
   id: `clone-graph`,
@@ -8,6 +10,14 @@ export const problem: PracticeProblem = {
   difficulty: `Medium`,
   category: `Graphs`,
   description: `Deep clone an undirected graph where each node has a value and a list of neighbors.`,
+  examples: [
+    {
+      input: "adjList = [[2,4],[1,3],[2,4],[1,3]]",
+      output: "A deep copy of the same graph",
+      explanation:
+        "Each cloned node has the same value and neighbor structure, but no original node is reused.",
+    },
+  ],
   points: [
     `Use a map from original node to cloned node.`,
     `DFS or BFS works as long as cycles are memoized.`,
@@ -17,6 +27,11 @@ export const problem: PracticeProblem = {
       title: "DFS with memoization",
       javascript: javascript.trim(),
       typescript: typescript.trim(),
+    },
+    {
+      title: "BFS with queue",
+      javascript: bfsJavascript.trim(),
+      typescript: bfsTypescript.trim(),
     },
   ],
 };

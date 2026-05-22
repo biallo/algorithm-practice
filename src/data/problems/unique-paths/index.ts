@@ -1,6 +1,6 @@
 import type { PracticeProblem } from "../../problemTypes";
-import javascript from "./solutions/main.js?raw";
-import typescript from "./solutions/main.ts?raw";
+import javascript from "./solutions/one-dimensional-grid-dp.js?raw";
+import typescript from "./solutions/one-dimensional-grid-dp.ts?raw";
 
 export const problem: PracticeProblem = {
   id: `unique-paths`,
@@ -8,6 +8,13 @@ export const problem: PracticeProblem = {
   difficulty: `Medium`,
   category: `Dynamic Programming`,
   description: `Count how many paths move from the top-left to bottom-right of an m by n grid when you can only move right or down.`,
+  examples: [
+    {
+      input: "m = 3, n = 7",
+      output: "28",
+      explanation: "There are 28 ways to move from top-left to bottom-right.",
+    },
+  ],
   points: [
     `Each cell is reachable from the cell above and the cell to the left.`,
     `A one-dimensional DP row is enough.`,

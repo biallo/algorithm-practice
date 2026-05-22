@@ -1,6 +1,6 @@
 import type { PracticeProblem } from "../../problemTypes";
-import javascript from "./solutions/main.js?raw";
-import typescript from "./solutions/main.ts?raw";
+import javascript from "./solutions/reachable-prefix-dp.js?raw";
+import typescript from "./solutions/reachable-prefix-dp.ts?raw";
 
 export const problem: PracticeProblem = {
   id: `word-break`,
@@ -8,6 +8,13 @@ export const problem: PracticeProblem = {
   difficulty: `Medium`,
   category: `Dynamic Programming`,
   description: `Return true if a string can be segmented into words from the dictionary.`,
+  examples: [
+    {
+      input: 's = "leetcode", wordDict = ["leet","code"]',
+      output: "true",
+      explanation: 'The string can be segmented as "leet" + "code".',
+    },
+  ],
   points: [
     `dp[i] means the prefix ending at i can be segmented.`,
     `For each valid prefix, try every dictionary word as the next suffix.`,

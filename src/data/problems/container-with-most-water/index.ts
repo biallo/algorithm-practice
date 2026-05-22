@@ -1,6 +1,6 @@
 import type { PracticeProblem } from "../../problemTypes";
-import javascript from "./solutions/main.js?raw";
-import typescript from "./solutions/main.ts?raw";
+import javascript from "./solutions/two-pointers.js?raw";
+import typescript from "./solutions/two-pointers.ts?raw";
 
 export const problem: PracticeProblem = {
   id: `container-with-most-water`,
@@ -8,6 +8,13 @@ export const problem: PracticeProblem = {
   difficulty: `Medium`,
   category: `Arrays`,
   description: `Choose two vertical lines that hold the most water.`,
+  examples: [
+    {
+      input: "height = [1,8,6,2,5,4,8,3,7]",
+      output: "49",
+      explanation: "The lines at indexes 1 and 8 hold width 7 and height 7.",
+    },
+  ],
   points: [
     `Area is limited by the shorter line.`,
     `Move the pointer at the shorter line inward.`,

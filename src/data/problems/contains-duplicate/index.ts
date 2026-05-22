@@ -1,6 +1,6 @@
 import type { PracticeProblem } from "../../problemTypes";
-import javascript from "./solutions/main.js?raw";
-import typescript from "./solutions/main.ts?raw";
+import javascript from "./solutions/set-membership.js?raw";
+import typescript from "./solutions/set-membership.ts?raw";
 
 export const problem: PracticeProblem = {
   id: `contains-duplicate`,
@@ -8,6 +8,13 @@ export const problem: PracticeProblem = {
   difficulty: `Easy`,
   category: `Hashing`,
   description: `Return true when any value appears at least twice in the array.`,
+  examples: [
+    {
+      input: "nums = [1,2,3,1]",
+      output: "true",
+      explanation: "The value 1 appears more than once.",
+    },
+  ],
   points: [
     `The answer only depends on whether a duplicate exists.`,
     `A set gives constant-time membership checks.`,

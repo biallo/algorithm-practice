@@ -1,6 +1,6 @@
 import type { PracticeProblem } from "../../problemTypes";
-import javascript from "./solutions/main.js?raw";
-import typescript from "./solutions/main.ts?raw";
+import javascript from "./solutions/track-maximum-and-minimum-products.js?raw";
+import typescript from "./solutions/track-maximum-and-minimum-products.ts?raw";
 
 export const problem: PracticeProblem = {
   id: `maximum-product-subarray`,
@@ -8,6 +8,13 @@ export const problem: PracticeProblem = {
   difficulty: `Medium`,
   category: `Dynamic Programming`,
   description: `Find the contiguous subarray with the largest product.`,
+  examples: [
+    {
+      input: "nums = [2,3,-2,4]",
+      output: "6",
+      explanation: "The subarray [2,3] has the largest product.",
+    },
+  ],
   points: [
     `Track both max and min products because a negative can flip them.`,
     `Start from the first number to handle all-negative inputs.`,
