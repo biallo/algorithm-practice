@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/track-lowest-price.js?raw';
 import typescript from './solutions/track-lowest-price.ts?raw';
 
-export const problem: PracticeProblem = {
+const bestTimeToBuyAndSellStock: PracticeProblem = {
   id: 'best-time-to-buy-and-sell-stock',
   title: 'Best Time to Buy and Sell Stock',
   difficulty: 'Easy',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default bestTimeToBuyAndSellStock;

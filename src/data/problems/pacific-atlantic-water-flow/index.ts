@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/reverse-dfs-from-both-oceans.js?raw';
 import typescript from './solutions/reverse-dfs-from-both-oceans.ts?raw';
 
-export const problem: PracticeProblem = {
+const pacificAtlanticWaterFlow: PracticeProblem = {
   id: 'pacific-atlantic-water-flow',
   title: 'Pacific Atlantic Water Flow',
   difficulty: 'Medium',
@@ -30,3 +30,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default pacificAtlanticWaterFlow;

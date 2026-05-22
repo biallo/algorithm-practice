@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/start-from-sequence-heads.js?raw';
 import typescript from './solutions/start-from-sequence-heads.ts?raw';
 
-export const problem: PracticeProblem = {
+const longestConsecutiveSequence: PracticeProblem = {
   id: 'longest-consecutive-sequence',
   title: 'Longest Consecutive Sequence',
   difficulty: 'Medium',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default longestConsecutiveSequence;

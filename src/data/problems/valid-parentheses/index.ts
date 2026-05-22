@@ -2,15 +2,16 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/stack-of-expected-closers.js?raw';
 import typescript from './solutions/stack-of-expected-closers.ts?raw';
 
-export const problem: PracticeProblem = {
+const validParentheses: PracticeProblem = {
   id: 'valid-parentheses',
   title: 'Valid Parentheses',
   difficulty: 'Easy',
   category: 'Stack',
-  description: 'Given a string containing only bracket characters, determine whether the brackets are valid.\n\nEvery opening bracket must be closed by the same type of bracket and in the correct order.',
+  description:
+    'Given a string containing only bracket characters, determine whether the brackets are valid.\n\nEvery opening bracket must be closed by the same type of bracket and in the correct order.',
   examples: [
     {
-      input: 's = \'()[]{}\'',
+      input: 's = "()[]{}"',
       output: 'true',
       explanation: 'Every opening bracket is closed in the correct order.',
     },
@@ -27,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default validParentheses;

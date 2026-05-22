@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/take-or-skip-dp.js?raw';
 import typescript from './solutions/take-or-skip-dp.ts?raw';
 
-export const problem: PracticeProblem = {
+const houseRobber: PracticeProblem = {
   id: 'house-robber',
   title: 'House Robber',
   difficulty: 'Medium',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default houseRobber;

@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/track-maximum-and-minimum-products.js?raw';
 import typescript from './solutions/track-maximum-and-minimum-products.ts?raw';
 
-export const problem: PracticeProblem = {
+const maximumProductSubarray: PracticeProblem = {
   id: 'maximum-product-subarray',
   title: 'Maximum Product Subarray',
   difficulty: 'Medium',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default maximumProductSubarray;

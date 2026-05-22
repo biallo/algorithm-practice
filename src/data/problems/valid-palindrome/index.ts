@@ -2,15 +2,16 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/two-pointers-with-skips.js?raw';
 import typescript from './solutions/two-pointers-with-skips.ts?raw';
 
-export const problem: PracticeProblem = {
+const validPalindrome: PracticeProblem = {
   id: 'valid-palindrome',
   title: 'Valid Palindrome',
   difficulty: 'Easy',
   category: 'Strings',
-  description: 'Given a string, determine whether it is a palindrome after removing all non-alphanumeric characters and ignoring case.\n\nCompare only letters and digits.',
+  description:
+    'Given a string, determine whether it is a palindrome after removing all non-alphanumeric characters and ignoring case.\n\nCompare only letters and digits.',
   examples: [
     {
-      input: 's = \'A man, a plan, a canal: Panama\'',
+      input: 's = "A man, a plan, a canal: Panama"',
       output: 'true',
       explanation:
         'After removing punctuation and ignoring case, it reads the same both ways.',
@@ -28,3 +29,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default validPalindrome;

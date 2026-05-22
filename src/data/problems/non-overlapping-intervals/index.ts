@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/sort-by-end-time.js?raw';
 import typescript from './solutions/sort-by-end-time.ts?raw';
 
-export const problem: PracticeProblem = {
+const nonOverlappingIntervals: PracticeProblem = {
   id: 'non-overlapping-intervals',
   title: 'Non-overlapping Intervals',
   difficulty: 'Medium',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default nonOverlappingIntervals;

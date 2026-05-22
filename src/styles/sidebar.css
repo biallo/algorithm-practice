@@ -40,7 +40,7 @@
 
 .sidebar__filters {
   display: grid;
-  gap: 14px;
+  gap: 8px;
   padding: 18px 20px 10px;
 }
 
@@ -54,7 +54,8 @@
 }
 
 .field input,
-.field select {
+.field select,
+.problem-select-empty {
   background: #f8fafc;
   border: 1px solid #cfd7e3;
   border-radius: 6px;
@@ -65,10 +66,24 @@
   width: 100%;
 }
 
+.problem-select-empty {
+  align-items: center;
+  border-style: dashed;
+  color: var(--muted);
+  display: grid;
+}
+
 .field input:focus,
 .field select:focus {
   border-color: var(--blue);
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
+}
+
+.problem-count {
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.3;
+  margin: 0 0 6px;
 }
 
 .problem-list {
@@ -80,14 +95,35 @@
   padding: 8px 20px;
 }
 
+.problem-list-empty {
+  border: 1px dashed #d8e2ee;
+  border-radius: 6px;
+  color: var(--muted);
+  display: grid;
+  gap: 4px;
+  padding: 18px;
+}
+
+.problem-list-empty strong {
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.problem-list-empty span {
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
 .problem-list__item {
+  align-items: center;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
   color: var(--ink);
   display: grid;
-  gap: 9px;
-  grid-template-rows: auto auto;
+  gap: 10px;
+  grid-template-columns: 28px minmax(0, 1fr);
   min-height: fit-content;
   overflow: hidden;
   padding: 12px 14px;
@@ -105,12 +141,38 @@
   border-color: #b8d4ff;
 }
 
+.problem-list__item.active .problem-list__number {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+.problem-list__content {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
 .problem-list__title {
   font-weight: 720;
   line-height: 1.35;
   overflow-wrap: anywhere;
   white-space: normal;
   word-break: normal;
+}
+
+.problem-list__number {
+  align-items: center;
+  border-radius: 6px;
+  color: var(--blue);
+  display: inline-grid;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.82rem;
+  font-weight: 800;
+  height: 28px;
+  justify-content: center;
+  line-height: 1;
+  width: 28px;
 }
 
 .problem-list__meta {
@@ -124,26 +186,20 @@
   min-width: 0;
 }
 
-.badge {
-  border-radius: 999px;
+.difficulty-text {
   display: inline-flex;
   font-size: 0.74rem;
   font-weight: 800;
-  line-height: 1;
-  padding: 5px 8px;
 }
 
-.badge--easy {
-  background: #dcfce7;
+.difficulty--easy {
   color: var(--green);
 }
 
-.badge--medium {
-  background: #fef3c7;
+.difficulty--medium {
   color: var(--amber);
 }
 
-.badge--hard {
-  background: #ffe4e6;
+.difficulty--hard {
   color: var(--red);
 }

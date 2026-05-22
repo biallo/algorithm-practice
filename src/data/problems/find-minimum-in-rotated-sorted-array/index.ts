@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/binary-search-on-rotation-point.js?raw';
 import typescript from './solutions/binary-search-on-rotation-point.ts?raw';
 
-export const problem: PracticeProblem = {
+const findMinimumInRotatedSortedArray: PracticeProblem = {
   id: 'find-minimum-in-rotated-sorted-array',
   title: 'Find Minimum in Rotated Sorted Array',
   difficulty: 'Medium',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default findMinimumInRotatedSortedArray;

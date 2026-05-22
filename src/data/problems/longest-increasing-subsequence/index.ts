@@ -4,7 +4,7 @@ import typescript from './solutions/tails-with-binary-search.ts?raw';
 import quadraticDpJavascript from './solutions/quadratic-dp.js?raw';
 import quadraticDpTypescript from './solutions/quadratic-dp.ts?raw';
 
-export const problem: PracticeProblem = {
+const longestIncreasingSubsequence: PracticeProblem = {
   id: 'longest-increasing-subsequence',
   title: 'Longest Increasing Subsequence',
   difficulty: 'Medium',
@@ -35,3 +35,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default longestIncreasingSubsequence;

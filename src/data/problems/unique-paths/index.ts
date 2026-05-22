@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/one-dimensional-grid-dp.js?raw';
 import typescript from './solutions/one-dimensional-grid-dp.ts?raw';
 
-export const problem: PracticeProblem = {
+const uniquePaths: PracticeProblem = {
   id: 'unique-paths',
   title: 'Unique Paths',
   difficulty: 'Medium',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default uniquePaths;

@@ -4,7 +4,7 @@ import dfsCycleDetectionTypescript from './solutions/dfs-cycle-detection.ts?raw'
 import javascript from './solutions/kahns-algorithm.js?raw';
 import typescript from './solutions/kahns-algorithm.ts?raw';
 
-export const problem: PracticeProblem = {
+const courseSchedule: PracticeProblem = {
   id: 'course-schedule',
   title: 'Course Schedule',
   difficulty: 'Medium',
@@ -35,3 +35,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default courseSchedule;

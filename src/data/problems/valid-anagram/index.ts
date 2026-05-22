@@ -4,15 +4,16 @@ import typescript from './solutions/character-frequency-counts.ts?raw';
 import sortJavascript from './solutions/sort.js?raw';
 import sortTypescript from './solutions/sort.ts?raw';
 
-export const problem: PracticeProblem = {
+const validAnagram: PracticeProblem = {
   id: 'valid-anagram',
   title: 'Valid Anagram',
   difficulty: 'Easy',
   category: 'Strings',
-  description: 'Given two strings, determine whether one string is an anagram of the other.\n\nThe strings are anagrams when they contain exactly the same characters with the same frequencies.',
+  description:
+    'Given two strings, determine whether one string is an anagram of the other.\n\nThe strings are anagrams when they contain exactly the same characters with the same frequencies.',
   examples: [
     {
-      input: 's = \'anagram\', t = \'nagaram\'',
+      input: 's = "anagram", t = "nagaram"',
       output: 'true',
       explanation:
         'Both strings contain the same characters with the same counts.',
@@ -35,3 +36,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default validAnagram;

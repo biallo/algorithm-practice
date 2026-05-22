@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/sort-and-sweep.js?raw';
 import typescript from './solutions/sort-and-sweep.ts?raw';
 
-export const problem: PracticeProblem = {
+const threeSum: PracticeProblem = {
   id: 'three-sum',
   title: '3Sum',
   difficulty: 'Medium',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default threeSum;

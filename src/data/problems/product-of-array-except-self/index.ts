@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/prefix-and-suffix-scan.js?raw';
 import typescript from './solutions/prefix-and-suffix-scan.ts?raw';
 
-export const problem: PracticeProblem = {
+const productOfArrayExceptSelf: PracticeProblem = {
   id: 'product-of-array-except-self',
   title: 'Product of Array Except Self',
   difficulty: 'Medium',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default productOfArrayExceptSelf;

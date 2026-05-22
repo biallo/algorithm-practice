@@ -4,17 +4,18 @@ import typescript from './solutions/prefix-dp-table.ts?raw';
 import rollingRowJavascript from './solutions/rolling-row.js?raw';
 import rollingRowTypescript from './solutions/rolling-row.ts?raw';
 
-export const problem: PracticeProblem = {
+const longestCommonSubsequence: PracticeProblem = {
   id: 'longest-common-subsequence',
   title: 'Longest Common Subsequence',
   difficulty: 'Medium',
   category: 'Dynamic Programming',
-  description: 'Given two strings, return the length of their longest common subsequence.\n\nA subsequence keeps characters in relative order but does not need to be contiguous.',
+  description:
+    'Given two strings, return the length of their longest common subsequence.\n\nA subsequence keeps characters in relative order but does not need to be contiguous.',
   examples: [
     {
-      input: 'text1 = \'abcde\', text2 = \'ace\'',
+      input: 'text1 = "abcde", text2 = "ace"',
       output: '3',
-      explanation: 'The longest common subsequence is \'ace\'.',
+      explanation: 'The longest common subsequence is "ace".',
     },
   ],
   points: [
@@ -34,3 +35,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default longestCommonSubsequence;

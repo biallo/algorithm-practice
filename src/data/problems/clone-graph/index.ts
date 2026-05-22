@@ -4,7 +4,7 @@ import bfsTypescript from './solutions/bfs.ts?raw';
 import javascript from './solutions/dfs-with-memoization.js?raw';
 import typescript from './solutions/dfs-with-memoization.ts?raw';
 
-export const problem: PracticeProblem = {
+const cloneGraph: PracticeProblem = {
   id: 'clone-graph',
   title: 'Clone Graph',
   difficulty: 'Medium',
@@ -36,3 +36,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default cloneGraph;

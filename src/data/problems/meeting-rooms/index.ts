@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/sort-and-detect-overlap.js?raw';
 import typescript from './solutions/sort-and-detect-overlap.ts?raw';
 
-export const problem: PracticeProblem = {
+const meetingRooms: PracticeProblem = {
   id: 'meeting-rooms',
   title: 'Meeting Rooms',
   difficulty: 'Easy',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default meetingRooms;

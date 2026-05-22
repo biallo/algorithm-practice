@@ -33,16 +33,14 @@ src/data/problems/two-sum/
     brute-force.js
 ```
 
-In the problem `index.ts`, export a `PracticeProblem` object with `description`,
-`examples`, `points`, and one or more `solutions`. Import solution files with
-`?raw` so the code can be shown in the UI.
+Import solution files with `?raw` so the code can be shown in the UI.
 
 ```ts
 import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/one-pass-hash-map.js?raw';
 import typescript from './solutions/one-pass-hash-map.ts?raw';
 
-export const problem: PracticeProblem = {
+const twoSum: PracticeProblem = {
   id: 'two-sum',
   title: 'Two Sum',
   difficulty: 'Easy',
@@ -65,10 +63,16 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default twoSum;
 ```
 
 After creating the folder, import the problem in `src/data/problems/index.ts`
 and add it to the exported `problems` array.
+
+```ts
+import twoSum from './two-sum/index';
+```
 
 Prompt formatting:
 

@@ -1,6 +1,7 @@
 import type { PracticeProblem } from "../data/problemTypes";
 
 type ProblemSidebarProps = {
+  problems: PracticeProblem[];
   filteredProblems: PracticeProblem[];
   selectedProblem: PracticeProblem | undefined;
   search: string;
@@ -9,12 +10,20 @@ type ProblemSidebarProps = {
 };
 
 export function ProblemSidebar({
+  problems,
   filteredProblems,
   selectedProblem,
   search,
   onSearchChange,
   onSelectProblem,
 }: ProblemSidebarProps) {
+  const problemNumberById = new Map(
+    problems.map((problem, index) => [problem.id, index + 1]),
+  );
+
+  const getProblemNumber = (problem: PracticeProblem) =>
+    problemNumberById.get(problem.id) ?? 0;
+
   return (
     <aside className="sidebar" aria-label="Problem filters and list">
       <div className="sidebar-heading">
@@ -35,51 +44,77 @@ export function ProblemSidebar({
           />
         </label>
 
-        <label className="field problem-select">
-          <select
-            value={selectedProblem?.id ?? ""}
-            onChange={(event) => {
-              const nextProblem = filteredProblems.find(
-                (problem) => problem.id === event.target.value,
-              );
+        <p className="problem-count">
+          {filteredProblems.length} of {problems.length} problems
+        </p>
 
-              if (nextProblem) {
-                onSelectProblem(nextProblem);
+        <label className="field problem-select">
+          {filteredProblems.length > 0 ? (
+            <select
+              value={
+                filteredProblems.some(
+                  (problem) => problem.id === selectedProblem?.id,
+                )
+                  ? selectedProblem?.id
+                  : filteredProblems[0]?.id
               }
-            }}
-          >
-            {filteredProblems.map((problem) => (
-              <option key={problem.id} value={problem.id}>
-                {problem.title}
-              </option>
-            ))}
-          </select>
+              onChange={(event) => {
+                const nextProblem = filteredProblems.find(
+                  (problem) => problem.id === event.target.value,
+                );
+
+                if (nextProblem) {
+                  onSelectProblem(nextProblem);
+                }
+              }}
+            >
+              {filteredProblems.map((problem) => (
+                <option key={problem.id} value={problem.id}>
+                  {getProblemNumber(problem)}. {problem.title}
+                </option>
+              ))}
+            </select>
+          ) : (
+            <div className="problem-select-empty">No matches</div>
+          )}
         </label>
       </div>
 
       <div className="problem-list" aria-label="Problems">
-        {filteredProblems.map((problem) => (
-          <button
-            className={
-              selectedProblem?.id === problem.id
-                ? "problem-list__item active"
-                : "problem-list__item"
-            }
-            key={problem.id}
-            onClick={() => onSelectProblem(problem)}
-            type="button"
-          >
-            <span className="problem-list__title">{problem.title}</span>
-            <span className="problem-list__meta">
-              <span
-                className={`badge badge--${problem.difficulty.toLowerCase()}`}
-              >
-                {problem.difficulty}
+        {filteredProblems.length > 0 ? (
+          filteredProblems.map((problem) => (
+            <button
+              className={
+                selectedProblem?.id === problem.id
+                  ? "problem-list__item active"
+                  : "problem-list__item"
+              }
+              key={problem.id}
+              onClick={() => onSelectProblem(problem)}
+              type="button"
+            >
+              <span className="problem-list__number">
+                {getProblemNumber(problem)}
               </span>
-              <span>{problem.category}</span>
-            </span>
-          </button>
-        ))}
+              <span className="problem-list__content">
+                <span className="problem-list__title">{problem.title}</span>
+                <span className="problem-list__meta">
+                  <span
+                    className={`difficulty-text difficulty--${problem.difficulty.toLowerCase()}`}
+                  >
+                    {problem.difficulty}
+                  </span>
+                  <span>{problem.category}</span>
+                </span>
+              </span>
+            </button>
+          ))
+        ) : (
+          <div className="problem-list-empty" role="status">
+            <strong>No matches</strong>
+            <span>Try a different search.</span>
+          </div>
+        )}
       </div>
     </aside>
   );

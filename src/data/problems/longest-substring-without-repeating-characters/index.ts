@@ -2,17 +2,18 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/sliding-window-with-last-seen-index.js?raw';
 import typescript from './solutions/sliding-window-with-last-seen-index.ts?raw';
 
-export const problem: PracticeProblem = {
+const longestSubstringWithoutRepeatingCharacters: PracticeProblem = {
   id: 'longest-substring-without-repeating-characters',
   title: 'Longest Substring Without Repeating Characters',
   difficulty: 'Medium',
   category: 'Strings',
-  description: 'Given a string, return the length of the longest contiguous substring that contains no repeated characters.\n\nThe substring must preserve the original order and cannot skip characters.',
+  description:
+    'Given a string, return the length of the longest contiguous substring that contains no repeated characters.\n\nThe substring must preserve the original order and cannot skip characters.',
   examples: [
     {
-      input: 's = \'abcabcbb\'',
+      input: 's = "abcabcbb"',
       output: '3',
-      explanation: 'The longest substring without repeats is \'abc\'.',
+      explanation: 'The longest substring without repeats is "abc".',
     },
   ],
   points: [
@@ -27,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default longestSubstringWithoutRepeatingCharacters;

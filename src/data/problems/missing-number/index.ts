@@ -4,7 +4,7 @@ import typescript from './solutions/expected-sum.ts?raw';
 import xorJavascript from './solutions/xor.js?raw';
 import xorTypescript from './solutions/xor.ts?raw';
 
-export const problem: PracticeProblem = {
+const missingNumber: PracticeProblem = {
   id: 'missing-number',
   title: 'Missing Number',
   difficulty: 'Easy',
@@ -35,3 +35,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default missingNumber;

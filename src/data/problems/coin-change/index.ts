@@ -4,7 +4,7 @@ import typescript from './solutions/bottom-up-amount-dp.ts?raw';
 import topDownMemoJavascript from './solutions/top-down-memo.js?raw';
 import topDownMemoTypescript from './solutions/top-down-memo.ts?raw';
 
-export const problem: PracticeProblem = {
+const coinChange: PracticeProblem = {
   id: 'coin-change',
   title: 'Coin Change',
   difficulty: 'Medium',
@@ -35,3 +35,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default coinChange;

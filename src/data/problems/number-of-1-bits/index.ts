@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/clear-lowest-set-bit.js?raw';
 import typescript from './solutions/clear-lowest-set-bit.ts?raw';
 
-export const problem: PracticeProblem = {
+const numberOf1Bits: PracticeProblem = {
   id: 'number-of-1-bits',
   title: 'Number of 1 Bits',
   difficulty: 'Easy',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default numberOf1Bits;

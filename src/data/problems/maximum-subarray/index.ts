@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/kadanes-algorithm.js?raw';
 import typescript from './solutions/kadanes-algorithm.ts?raw';
 
-export const problem: PracticeProblem = {
+const maximumSubarray: PracticeProblem = {
   id: 'maximum-subarray',
   title: 'Maximum Subarray',
   difficulty: 'Medium',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default maximumSubarray;

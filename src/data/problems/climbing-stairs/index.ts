@@ -4,7 +4,7 @@ import memoizationJavascript from './solutions/memoization.js?raw';
 import memoizationTypescript from './solutions/memoization.ts?raw';
 import typescript from './solutions/rolling-dp.ts?raw';
 
-export const problem: PracticeProblem = {
+const climbingStairs: PracticeProblem = {
   id: 'climbing-stairs',
   title: 'Climbing Stairs',
   difficulty: 'Easy',
@@ -35,3 +35,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default climbingStairs;

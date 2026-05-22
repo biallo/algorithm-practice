@@ -4,7 +4,7 @@ import bruteForceTypescript from './solutions/brute-force.ts?raw';
 import javascript from './solutions/one-pass-hash-map.js?raw';
 import typescript from './solutions/one-pass-hash-map.ts?raw';
 
-export const problem: PracticeProblem = {
+const twoSum: PracticeProblem = {
   id: 'two-sum',
   title: 'Two Sum',
   difficulty: 'Easy',
@@ -36,3 +36,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default twoSum;

@@ -23,13 +23,13 @@ export function PracticeApp() {
   }, [search]);
 
   const selectedProblem =
-    filteredProblems.find((problem) => problem.id === selectedId) ??
-    filteredProblems[0];
+    problems.find((problem) => problem.id === selectedId) ?? problems[0];
 
   return (
     <div className="app-shell">
       <div className="workspace">
         <ProblemSidebar
+          problems={problems}
           filteredProblems={filteredProblems}
           selectedProblem={selectedProblem}
           search={search}

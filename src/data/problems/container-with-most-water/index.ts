@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/two-pointers.js?raw';
 import typescript from './solutions/two-pointers.ts?raw';
 
-export const problem: PracticeProblem = {
+const containerWithMostWater: PracticeProblem = {
   id: 'container-with-most-water',
   title: 'Container With Most Water',
   difficulty: 'Medium',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default containerWithMostWater;

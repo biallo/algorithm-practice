@@ -4,15 +4,16 @@ import bfsTypescript from './solutions/bfs.ts?raw';
 import javascript from './solutions/flood-fill.js?raw';
 import typescript from './solutions/flood-fill.ts?raw';
 
-export const problem: PracticeProblem = {
+const numberOfIslands: PracticeProblem = {
   id: 'number-of-islands',
   title: 'Number of Islands',
   difficulty: 'Medium',
   category: 'Matrix',
-  description: 'Given a `grid` of land and water cells, count the number of islands.\n\nAn island is a group of horizontally or vertically connected land cells surrounded by water or `grid` boundaries.',
+  description:
+    'Given a `grid` of land and water cells, count the number of islands.\n\nAn island is a group of horizontally or vertically connected land cells surrounded by water or `grid` boundaries.',
   examples: [
     {
-      input: 'grid = [[\'1\',\'1\',\'0\'],[\'0\',\'1\',\'0\'],[\'1\',\'0\',\'1\']]',
+      input: 'grid = [["1","1","0"],["0","1","0"],["1","0","1"]]',
       output: '3',
       explanation: 'There are three disconnected groups of land cells.',
     },
@@ -34,3 +35,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default numberOfIslands;

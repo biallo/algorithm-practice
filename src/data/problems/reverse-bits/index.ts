@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/shift-and-append.js?raw';
 import typescript from './solutions/shift-and-append.ts?raw';
 
-export const problem: PracticeProblem = {
+const reverseBits: PracticeProblem = {
   id: 'reverse-bits',
   title: 'Reverse Bits',
   difficulty: 'Easy',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default reverseBits;

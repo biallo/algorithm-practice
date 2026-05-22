@@ -2,18 +2,19 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/center-expansion.js?raw';
 import typescript from './solutions/center-expansion.ts?raw';
 
-export const problem: PracticeProblem = {
+const palindromicSubstrings: PracticeProblem = {
   id: 'palindromic-substrings',
   title: 'Palindromic Substrings',
   difficulty: 'Medium',
   category: 'Strings',
-  description: 'Given a string, return the total number of substrings that are palindromes.\n\nA substring is contiguous, and single-character substrings count as palindromes.',
+  description:
+    'Given a string, return the total number of substrings that are palindromes.\n\nA substring is contiguous, and single-character substrings count as palindromes.',
   examples: [
     {
-      input: 's = \'aaa\'',
+      input: 's = "aaa"',
       output: '6',
       explanation:
-        'The palindromic substrings are \'a\', \'a\', \'a\', \'aa\', \'aa\', and \'aaa\'.',
+        'The palindromic substrings are "a", "a", "a", "aa", "aa", and "aaa".',
     },
   ],
   points: [
@@ -28,3 +29,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default palindromicSubstrings;

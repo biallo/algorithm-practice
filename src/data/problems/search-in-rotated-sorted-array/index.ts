@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/binary-search-by-sorted-side.js?raw';
 import typescript from './solutions/binary-search-by-sorted-side.ts?raw';
 
-export const problem: PracticeProblem = {
+const searchInRotatedSortedArray: PracticeProblem = {
   id: 'search-in-rotated-sorted-array',
   title: 'Search in Rotated Sorted Array',
   difficulty: 'Medium',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default searchInRotatedSortedArray;

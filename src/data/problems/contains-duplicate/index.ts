@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/set-membership.js?raw';
 import typescript from './solutions/set-membership.ts?raw';
 
-export const problem: PracticeProblem = {
+const containsDuplicate: PracticeProblem = {
   id: 'contains-duplicate',
   title: 'Contains Duplicate',
   difficulty: 'Easy',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default containsDuplicate;

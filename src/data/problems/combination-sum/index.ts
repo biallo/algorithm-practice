@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/backtracking-with-reuse.js?raw';
 import typescript from './solutions/backtracking-with-reuse.ts?raw';
 
-export const problem: PracticeProblem = {
+const combinationSum: PracticeProblem = {
   id: 'combination-sum',
   title: 'Combination Sum',
   difficulty: 'Medium',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default combinationSum;

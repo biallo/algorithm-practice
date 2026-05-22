@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/three-phase-insert.js?raw';
 import typescript from './solutions/three-phase-insert.ts?raw';
 
-export const problem: PracticeProblem = {
+const insertInterval: PracticeProblem = {
   id: 'insert-interval',
   title: 'Insert Interval',
   difficulty: 'Medium',
@@ -29,3 +29,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default insertInterval;

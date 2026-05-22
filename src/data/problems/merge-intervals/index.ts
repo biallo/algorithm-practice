@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/sort-then-merge.js?raw';
 import typescript from './solutions/sort-then-merge.ts?raw';
 
-export const problem: PracticeProblem = {
+const mergeIntervals: PracticeProblem = {
   id: 'merge-intervals',
   title: 'Merge Intervals',
   difficulty: 'Medium',
@@ -28,3 +28,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default mergeIntervals;

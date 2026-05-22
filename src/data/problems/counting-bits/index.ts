@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/dp-from-right-shift.js?raw';
 import typescript from './solutions/dp-from-right-shift.ts?raw';
 
-export const problem: PracticeProblem = {
+const countingBits: PracticeProblem = {
   id: 'counting-bits',
   title: 'Counting Bits',
   difficulty: 'Easy',
@@ -25,3 +25,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default countingBits;

@@ -2,7 +2,7 @@ import type { PracticeProblem } from '../../problemTypes';
 import javascript from './solutions/greedy-farthest-reach.js?raw';
 import typescript from './solutions/greedy-farthest-reach.ts?raw';
 
-export const problem: PracticeProblem = {
+const jumpGame: PracticeProblem = {
   id: 'jump-game',
   title: 'Jump Game',
   difficulty: 'Medium',
@@ -29,3 +29,5 @@ export const problem: PracticeProblem = {
     },
   ],
 };
+
+export default jumpGame;
