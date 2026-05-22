@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Combination Sum`,
   difficulty: `Medium`,
   category: `Dynamic Programming`,
-  description: `Return all unique combinations where candidate numbers sum to a target. Each candidate can be used more than once.`,
+  description: `Given a list of distinct candidate numbers and a target, return all unique combinations where the chosen numbers sum to the target.\nA candidate may be chosen more than once, and combinations should not be duplicated.`,
   examples: [
     {
       input: "candidates = [2,3,6,7], target = 7",

@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Longest Consecutive Sequence`,
   difficulty: `Medium`,
   category: `Hashing`,
-  description: `Return the length of the longest consecutive integer sequence.`,
+  description: `Given an unsorted array of integers, return the length of the longest sequence of consecutive values.\nThe sequence does not need to appear contiguously in the original array.`,
   examples: [
     {
       input: "nums = [100,4,200,1,3,2]",

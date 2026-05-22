@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Product of Array Except Self`,
   difficulty: `Medium`,
   category: `Arrays`,
-  description: `Return an array where each value is the product of every number except the number at that index.`,
+  description: `Given an integer array, return an array where each position contains the product of every input value except the value at that same position.\nThe solution should not use division.`,
   examples: [
     {
       input: "nums = [1,2,3,4]",

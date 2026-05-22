@@ -9,7 +9,7 @@ export const problem: PracticeProblem = {
   title: `Course Schedule`,
   difficulty: `Medium`,
   category: `Graphs`,
-  description: `Return true if every course can be completed given prerequisite pairs.`,
+  description: `Given the number of courses and prerequisite pairs, determine whether it is possible to finish all courses.\nEach pair [course, prerequisite] means the prerequisite must be completed before the course.`,
   examples: [
     {
       input: "numCourses = 2, prerequisites = [[1,0]]",

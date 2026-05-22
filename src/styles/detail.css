@@ -61,6 +61,7 @@
   font-size: 0.95rem;
   line-height: 1.75;
   margin: 0;
+  white-space: pre-line;
 }
 
 .examples-block {

@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Valid Palindrome`,
   difficulty: `Easy`,
   category: `Strings`,
-  description: `Return true if a string reads the same forward and backward after removing non-alphanumeric characters and ignoring case.`,
+  description: `Given a string, determine whether it is a palindrome after removing all non-alphanumeric characters and ignoring case.\nCompare only letters and digits.`,
   examples: [
     {
       input: 's = "A man, a plan, a canal: Panama"',

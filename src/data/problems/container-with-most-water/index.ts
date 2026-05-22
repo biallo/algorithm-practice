@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Container With Most Water`,
   difficulty: `Medium`,
   category: `Arrays`,
-  description: `Choose two vertical lines that hold the most water.`,
+  description: `Given an array of line heights, choose two lines that form a container with the x-axis.\nReturn the maximum amount of water the container can hold, where area is width times the shorter line height.`,
   examples: [
     {
       input: "height = [1,8,6,2,5,4,8,3,7]",

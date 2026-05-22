@@ -9,7 +9,7 @@ export const problem: PracticeProblem = {
   title: `Longest Common Subsequence`,
   difficulty: `Medium`,
   category: `Dynamic Programming`,
-  description: `Return the length of the longest subsequence shared by two strings.`,
+  description: `Given two strings, return the length of their longest common subsequence.\nA subsequence keeps characters in relative order but does not need to be contiguous.`,
   examples: [
     {
       input: 'text1 = "abcde", text2 = "ace"',

@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Number of 1 Bits`,
   difficulty: `Easy`,
   category: `Binary`,
-  description: `Count how many set bits exist in the unsigned binary representation of a number.`,
+  description: `Given a 32-bit unsigned integer, return the number of 1 bits in its binary representation.\nThis count is also known as the Hamming weight.`,
   examples: [
     {
       input: "n = 11",

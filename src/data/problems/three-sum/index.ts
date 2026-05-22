@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `3Sum`,
   difficulty: `Medium`,
   category: `Arrays`,
-  description: `Return all unique triplets whose values sum to zero.`,
+  description: `Given an integer array, return all unique triplets whose values sum to zero.\nThe same element cannot be reused within a triplet, and duplicate triplets should not appear in the result.`,
   examples: [
     {
       input: "nums = [-1,0,1,2,-1,-4]",

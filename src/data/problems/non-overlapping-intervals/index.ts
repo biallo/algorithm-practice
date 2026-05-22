@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Non-overlapping Intervals`,
   difficulty: `Medium`,
   category: `Intervals`,
-  description: `Return the minimum number of intervals to remove so the rest do not overlap.`,
+  description: `Given a list of intervals, return the minimum number of intervals that must be removed so that the remaining intervals do not overlap.`,
   examples: [
     {
       input: "intervals = [[1,2],[2,3],[3,4],[1,3]]",

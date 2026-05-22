@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Reverse Bits`,
   difficulty: `Easy`,
   category: `Binary`,
-  description: `Reverse the bits of a 32-bit unsigned integer.`,
+  description: `Given a 32-bit unsigned integer, reverse the order of all 32 binary bits and return the resulting unsigned integer.\nLeading zeros in the original value become trailing zeros after reversal.`,
   examples: [
     {
       input: "n = 43261596",

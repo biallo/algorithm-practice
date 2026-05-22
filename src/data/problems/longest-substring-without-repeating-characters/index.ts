@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Longest Substring Without Repeating Characters`,
   difficulty: `Medium`,
   category: `Strings`,
-  description: `Return the length of the longest substring that contains no repeated characters.`,
+  description: `Given a string, return the length of the longest contiguous substring that contains no repeated characters.\nThe substring must preserve the original order and cannot skip characters.`,
   examples: [
     {
       input: 's = "abcabcbb"',

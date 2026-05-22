@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Valid Parentheses`,
   difficulty: `Easy`,
   category: `Stack`,
-  description: `Return true if every opening bracket is closed by the same type of bracket in the correct order.`,
+  description: `Given a string containing only bracket characters, determine whether the brackets are valid.\nEvery opening bracket must be closed by the same type of bracket and in the correct order.`,
   examples: [
     {
       input: 's = "()[]{}"',

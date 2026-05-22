@@ -9,7 +9,7 @@ export const problem: PracticeProblem = {
   title: `Valid Anagram`,
   difficulty: `Easy`,
   category: `Strings`,
-  description: `Return true if two strings contain the same characters with the same frequencies.`,
+  description: `Given two strings, determine whether one string is an anagram of the other.\nThe strings are anagrams when they contain exactly the same characters with the same frequencies.`,
   examples: [
     {
       input: 's = "anagram", t = "nagaram"',

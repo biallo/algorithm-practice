@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Unique Paths`,
   difficulty: `Medium`,
   category: `Dynamic Programming`,
-  description: `Count how many paths move from the top-left to bottom-right of an m by n grid when you can only move right or down.`,
+  description: `Given an m by n grid, count how many unique paths move from the top-left corner to the bottom-right corner.\nYou may only move either down or right at any point.`,
   examples: [
     {
       input: "m = 3, n = 7",

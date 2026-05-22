@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Word Break`,
   difficulty: `Medium`,
   category: `Dynamic Programming`,
-  description: `Return true if a string can be segmented into words from the dictionary.`,
+  description: `Given a string and a dictionary of words, determine whether the string can be segmented into a space-separated sequence of one or more dictionary words.\nWords from the dictionary may be reused.`,
   examples: [
     {
       input: 's = "leetcode", wordDict = ["leet","code"]',

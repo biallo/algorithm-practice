@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Best Time to Buy and Sell Stock`,
   difficulty: `Easy`,
   category: `Arrays`,
-  description: `Given daily stock prices, return the maximum profit from one buy followed by one sell.`,
+  description: `Given an array prices where prices[i] is the price of a stock on day i, choose one day to buy and a later day to sell.\nReturn the maximum profit you can make from exactly one transaction, or 0 if no profitable transaction exists.`,
   examples: [
     {
       input: "prices = [7,1,5,3,6,4]",

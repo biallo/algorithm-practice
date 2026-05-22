@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Jump Game`,
   difficulty: `Medium`,
   category: `Dynamic Programming`,
-  description: `Return true if you can reach the final index when each value is the maximum jump length from that position.`,
+  description: `Given an array where each value is the maximum jump length from that index, determine whether you can reach the last index starting from index 0.`,
   examples: [
     {
       input: "nums = [2,3,1,1,4]",

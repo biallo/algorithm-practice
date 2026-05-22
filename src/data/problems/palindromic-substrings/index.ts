@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Palindromic Substrings`,
   difficulty: `Medium`,
   category: `Strings`,
-  description: `Count all substrings of a string that are palindromes.`,
+  description: `Given a string, return the total number of substrings that are palindromes.\nA substring is contiguous, and single-character substrings count as palindromes.`,
   examples: [
     {
       input: 's = "aaa"',

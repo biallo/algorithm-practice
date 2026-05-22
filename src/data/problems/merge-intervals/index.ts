@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Merge Intervals`,
   difficulty: `Medium`,
   category: `Intervals`,
-  description: `Merge all overlapping intervals and return the non-overlapping result.`,
+  description: `Given an array of intervals, merge all overlapping intervals and return a list of non-overlapping intervals that covers the same ranges.`,
   examples: [
     {
       input: "intervals = [[1,3],[2,6],[8,10],[15,18]]",

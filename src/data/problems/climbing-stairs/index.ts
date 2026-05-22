@@ -9,7 +9,7 @@ export const problem: PracticeProblem = {
   title: `Climbing Stairs`,
   difficulty: `Easy`,
   category: `Dynamic Programming`,
-  description: `Count how many distinct ways there are to climb n stairs when each move is 1 or 2 steps.`,
+  description: `You are climbing a staircase with n steps.\nEach move can climb either 1 step or 2 steps. Return the number of distinct ways to reach the top.`,
   examples: [
     {
       input: "n = 3",

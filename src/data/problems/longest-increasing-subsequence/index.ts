@@ -9,7 +9,7 @@ export const problem: PracticeProblem = {
   title: `Longest Increasing Subsequence`,
   difficulty: `Medium`,
   category: `Dynamic Programming`,
-  description: `Return the length of the longest strictly increasing subsequence.`,
+  description: `Given an integer array, return the length of the longest strictly increasing subsequence.\nA subsequence may skip elements, but the remaining elements must keep their original order.`,
   examples: [
     {
       input: "nums = [10,9,2,5,3,7,101,18]",

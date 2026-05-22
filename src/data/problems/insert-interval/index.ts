@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Insert Interval`,
   difficulty: `Medium`,
   category: `Intervals`,
-  description: `Insert a new interval into sorted non-overlapping intervals and merge if needed.`,
+  description: `Given a sorted list of non-overlapping intervals and a new interval, insert the new interval into the list.\nMerge any overlapping intervals so the final list remains sorted and non-overlapping.`,
   examples: [
     {
       input: "intervals = [[1,3],[6,9]], newInterval = [2,5]",

@@ -9,7 +9,7 @@ export const problem: PracticeProblem = {
   title: `Coin Change`,
   difficulty: `Medium`,
   category: `Dynamic Programming`,
-  description: `Return the fewest coins needed to make the amount, or -1 if it cannot be made.`,
+  description: `Given an array of coin denominations and a target amount, return the minimum number of coins needed to make that amount.\nYou may use each coin denomination unlimited times. Return -1 if the amount cannot be made.`,
   examples: [
     {
       input: "coins = [1,2,5], amount = 11",

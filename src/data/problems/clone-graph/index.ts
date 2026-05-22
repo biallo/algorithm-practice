@@ -9,7 +9,7 @@ export const problem: PracticeProblem = {
   title: `Clone Graph`,
   difficulty: `Medium`,
   category: `Graphs`,
-  description: `Deep clone an undirected graph where each node has a value and a list of neighbors.`,
+  description: `Given a reference to a node in a connected undirected graph, return a deep copy of the entire graph.\nEach node contains a value and a list of neighbor nodes, and the cloned graph must not reuse any original nodes.`,
   examples: [
     {
       input: "adjList = [[2,4],[1,3],[2,4],[1,3]]",

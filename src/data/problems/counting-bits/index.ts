@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Counting Bits`,
   difficulty: `Easy`,
   category: `Binary`,
-  description: `For every number from 0 to n, return the count of set bits.`,
+  description: `Given an integer n, return an array answer where answer[i] is the number of 1 bits in the binary representation of i for every i from 0 through n.`,
   examples: [
     {
       input: "n = 5",

@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `House Robber`,
   difficulty: `Medium`,
   category: `Dynamic Programming`,
-  description: `Return the maximum money you can rob without robbing adjacent houses.`,
+  description: `Given an array where each value is the amount of money in a house, return the maximum amount you can rob.\nAdjacent houses cannot both be robbed because doing so triggers the security system.`,
   examples: [
     {
       input: "nums = [2,7,9,3,1]",

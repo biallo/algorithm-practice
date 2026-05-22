@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Encode and Decode Strings`,
   difficulty: `Medium`,
   category: `Strings`,
-  description: `Design a reversible way to encode an array of strings into one string and decode it back.`,
+  description: `Design two functions that encode an array of strings into a single string and decode that string back to the original array.\nThe encoding must preserve empty strings, delimiters, and arbitrary characters inside the strings.`,
   examples: [
     {
       input: 'strs = ["lint","code","love","you"]',

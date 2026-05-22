@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Pacific Atlantic Water Flow`,
   difficulty: `Medium`,
   category: `Matrix`,
-  description: `Return cells from which water can flow to both the Pacific and Atlantic oceans.`,
+  description: `Given a matrix of heights, return all coordinates from which water can flow to both the Pacific and Atlantic oceans.\nWater can flow from a cell to neighboring cells with height less than or equal to the current cell.`,
   examples: [
     {
       input:

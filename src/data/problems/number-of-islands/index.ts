@@ -9,7 +9,7 @@ export const problem: PracticeProblem = {
   title: `Number of Islands`,
   difficulty: `Medium`,
   category: `Matrix`,
-  description: `Count connected groups of land cells in a grid of water and land.`,
+  description: `Given a grid of land and water cells, count the number of islands.\nAn island is a group of horizontally or vertically connected land cells surrounded by water or grid boundaries.`,
   examples: [
     {
       input: 'grid = [["1","1","0"],["0","1","0"],["1","0","1"]]',

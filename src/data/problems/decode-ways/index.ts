@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Decode Ways`,
   difficulty: `Medium`,
   category: `Dynamic Programming`,
-  description: `Count how many ways a digit string can be decoded where A=1 through Z=26.`,
+  description: `Given a string of digits, count how many ways it can be decoded using the mapping A=1 through Z=26.\nDigits must be grouped into valid one-digit or two-digit codes, and invalid encodings involving 0 should not count.`,
   examples: [
     {
       input: 's = "226"',

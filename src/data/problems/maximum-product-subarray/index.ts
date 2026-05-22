@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Maximum Product Subarray`,
   difficulty: `Medium`,
   category: `Dynamic Programming`,
-  description: `Find the contiguous subarray with the largest product.`,
+  description: `Given an integer array, return the largest product of any non-empty contiguous subarray.\nThe array can contain negative numbers, which may turn a small product into a large positive product.`,
   examples: [
     {
       input: "nums = [2,3,-2,4]",

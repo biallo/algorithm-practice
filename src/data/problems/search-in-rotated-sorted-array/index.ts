@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Search in Rotated Sorted Array`,
   difficulty: `Medium`,
   category: `Binary`,
-  description: `Return the index of a target in a rotated sorted array, or -1 if it is not present.`,
+  description: `Given a sorted array of unique numbers that has been rotated and a target value, return the index of the target.\nReturn -1 if the target is not present.`,
   examples: [
     {
       input: "nums = [4,5,6,7,0,1,2], target = 0",

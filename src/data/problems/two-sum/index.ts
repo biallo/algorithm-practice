@@ -9,7 +9,7 @@ export const problem: PracticeProblem = {
   title: `Two Sum`,
   difficulty: `Easy`,
   category: `Hashing`,
-  description: `Given an array of integers and a target, return the indexes of the two numbers that add up to the target.`,
+  description: `Given an array of integers and a target value, return the indexes of two different elements whose values add up to the target.\nEach input has exactly one valid answer, and the same element cannot be used twice.`,
   examples: [
     {
       input: "nums = [2,7,11,15], target = 9",

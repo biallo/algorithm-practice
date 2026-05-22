@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Longest Repeating Character Replacement`,
   difficulty: `Medium`,
   category: `Strings`,
-  description: `Return the length of the longest substring that can become all one character after at most k replacements.`,
+  description: `Given a string and an integer k, return the length of the longest substring that can be converted into a string of one repeated character by replacing at most k characters.`,
   examples: [
     {
       input: 's = "AABABBA", k = 1',

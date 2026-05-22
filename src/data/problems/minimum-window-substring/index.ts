@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Minimum Window Substring`,
   difficulty: `Hard`,
   category: `Strings`,
-  description: `Return the smallest substring of s that contains every character from t, including duplicates.`,
+  description: `Given two strings s and t, return the shortest substring of s that contains every character from t, including duplicate characters.\nReturn an empty string if no such window exists.`,
   examples: [
     {
       input: 's = "ADOBECODEBANC", t = "ABC"',

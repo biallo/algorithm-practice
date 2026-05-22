@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Find Minimum in Rotated Sorted Array`,
   difficulty: `Medium`,
   category: `Binary`,
-  description: `Given a rotated sorted array with unique values, return the smallest value.`,
+  description: `Given a sorted array of unique numbers that has been rotated at an unknown pivot, return the minimum element.\nThe algorithm should take advantage of the rotated sorted structure instead of scanning every value.`,
   examples: [
     {
       input: "nums = [3,4,5,1,2]",

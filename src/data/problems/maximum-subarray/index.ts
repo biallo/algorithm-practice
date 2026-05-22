@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Maximum Subarray`,
   difficulty: `Medium`,
   category: `Dynamic Programming`,
-  description: `Find the contiguous non-empty subarray with the largest sum.`,
+  description: `Given an integer array, return the largest sum of any non-empty contiguous subarray.\nThe subarray must use adjacent elements from the original array.`,
   examples: [
     {
       input: "nums = [-2,1,-3,4,-1,2,1,-5,4]",

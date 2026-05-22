@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Contains Duplicate`,
   difficulty: `Easy`,
   category: `Hashing`,
-  description: `Return true when any value appears at least twice in the array.`,
+  description: `Given an integer array, return true if any value appears at least twice.\nReturn false when every value in the array is unique.`,
   examples: [
     {
       input: "nums = [1,2,3,1]",

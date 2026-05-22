@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Group Anagrams`,
   difficulty: `Medium`,
   category: `Hashing`,
-  description: `Group strings that are anagrams of each other.`,
+  description: `Given an array of strings, group together the strings that are anagrams of each other.\nTwo strings are anagrams when they contain the same characters with the same frequencies.`,
   examples: [
     {
       input: 'strs = ["eat","tea","tan","ate","nat","bat"]',

@@ -7,7 +7,7 @@ export const problem: PracticeProblem = {
   title: `Meeting Rooms`,
   difficulty: `Easy`,
   category: `Intervals`,
-  description: `Return true if a person can attend every meeting interval.`,
+  description: `Given an array of meeting time intervals, determine whether one person can attend every meeting.\nMeetings conflict when one starts before the previous one has ended.`,
   examples: [
     {
       input: "intervals = [[0,30],[5,10],[15,20]]",
