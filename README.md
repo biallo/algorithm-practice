@@ -1,6 +1,6 @@
 # Algorithm Practice
 
-A collection of JavaScript algorithm practices.
+A collection of javascript algorithm practices.
 
 ## Preview
 
