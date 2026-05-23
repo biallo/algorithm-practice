@@ -114,7 +114,7 @@
 .code-block code {
   color: #dce7f3;
   display: block;
-  white-space: pre;
+  white-space: pre-wrap;
 }
 
 .token.comment,
