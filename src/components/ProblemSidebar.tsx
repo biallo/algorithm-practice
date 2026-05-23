@@ -1,3 +1,4 @@
+import { useEffect, useMemo, useRef } from "react";
 import type { PracticeProblem } from "../data/problemTypes";
 
 type ProblemSidebarProps = {
@@ -17,12 +18,39 @@ export function ProblemSidebar({
   onSearchChange,
   onSelectProblem,
 }: ProblemSidebarProps) {
-  const problemNumberById = new Map(
-    problems.map((problem, index) => [problem.id, index + 1]),
+  const listRef = useRef<HTMLDivElement>(null);
+  const itemRefs = useRef(new Map<string, HTMLButtonElement>());
+  const problemNumberById = useMemo(
+    () => new Map(problems.map((problem, index) => [problem.id, index + 1])),
+    [problems],
   );
 
   const getProblemNumber = (problem: PracticeProblem) =>
     problemNumberById.get(problem.id) ?? 0;
+
+  useEffect(() => {
+    if (!selectedProblem) {
+      return;
+    }
+
+    const list = listRef.current;
+    const selectedItem = itemRefs.current.get(selectedProblem.id);
+
+    if (!list || !selectedItem) {
+      return;
+    }
+
+    const listRect = list.getBoundingClientRect();
+    const itemRect = selectedItem.getBoundingClientRect();
+    const isVisible =
+      itemRect.bottom > listRect.top && itemRect.top < listRect.bottom;
+
+    if (isVisible) {
+      return;
+    }
+
+    selectedItem.scrollIntoView({ block: "nearest", inline: "nearest" });
+  }, [filteredProblems, selectedProblem]);
 
   return (
     <aside className="sidebar" aria-label="Problem filters and list">
@@ -80,7 +108,7 @@ export function ProblemSidebar({
         </label>
       </div>
 
-      <div className="problem-list" aria-label="Problems">
+      <div className="problem-list" aria-label="Problems" ref={listRef}>
         {filteredProblems.length > 0 ? (
           filteredProblems.map((problem) => (
             <button
@@ -91,6 +119,13 @@ export function ProblemSidebar({
               }
               key={problem.id}
               onClick={() => onSelectProblem(problem)}
+              ref={(node) => {
+                if (node) {
+                  itemRefs.current.set(problem.id, node);
+                } else {
+                  itemRefs.current.delete(problem.id);
+                }
+              }}
               type="button"
             >
               <span className="problem-list__number">
