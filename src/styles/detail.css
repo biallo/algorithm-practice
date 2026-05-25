@@ -49,10 +49,14 @@
   color: var(--red);
 }
 
+.badge--category {
+  background: #e0e7ff;
+  color: var(--indigo);
+}
+
 .detail__metrics {
-  align-items: end;
   color: var(--muted);
-  display: grid;
+  display: flex;
   font-size: 0.86rem;
   gap: 4px;
   justify-items: end;

@@ -39,7 +39,7 @@ export function ProblemDetail({ problem }: ProblemDetailProps) {
           <span className={`badge badge--${problem.difficulty.toLowerCase()}`}>
             {problem.difficulty}
           </span>
-          <span>{problem.category}</span>
+          <span className="badge badge--category">{problem.category}</span>
         </div>
       </div>
 
