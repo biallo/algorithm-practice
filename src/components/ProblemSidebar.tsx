@@ -139,7 +139,9 @@ export function ProblemSidebar({
                   >
                     {problem.difficulty}
                   </span>
-                  <span>{problem.category}</span>
+                  <span className="category--text">
+                    {problem.category}
+                  </span>
                 </span>
               </span>
             </button>

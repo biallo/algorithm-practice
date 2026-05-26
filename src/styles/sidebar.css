@@ -203,3 +203,9 @@
 .difficulty--hard {
   color: var(--red);
 }
+
+.category--text {
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: var(--indigo);
+}
