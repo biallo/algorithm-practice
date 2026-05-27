@@ -4,6 +4,7 @@ import type { PracticeProblem } from "../data/problemTypes";
 type ProblemSidebarProps = {
   problems: PracticeProblem[];
   filteredProblems: PracticeProblem[];
+  completedProblemIds: ReadonlySet<string>;
   selectedProblem: PracticeProblem | undefined;
   search: string;
   onSearchChange: (value: string) => void;
@@ -13,6 +14,7 @@ type ProblemSidebarProps = {
 export function ProblemSidebar({
   problems,
   filteredProblems,
+  completedProblemIds,
   selectedProblem,
   search,
   onSearchChange,
@@ -99,6 +101,7 @@ export function ProblemSidebar({
               {filteredProblems.map((problem) => (
                 <option key={problem.id} value={problem.id}>
                   {getProblemNumber(problem)}. {problem.title}
+                  {completedProblemIds.has(problem.id) ? " - Completed" : ""}
                 </option>
               ))}
             </select>
@@ -110,42 +113,57 @@ export function ProblemSidebar({
 
       <div className="problem-list" aria-label="Problems" ref={listRef}>
         {filteredProblems.length > 0 ? (
-          filteredProblems.map((problem) => (
-            <button
-              className={
-                selectedProblem?.id === problem.id
-                  ? "problem-list__item active"
-                  : "problem-list__item"
-              }
-              key={problem.id}
-              onClick={() => onSelectProblem(problem)}
-              ref={(node) => {
-                if (node) {
-                  itemRefs.current.set(problem.id, node);
-                } else {
-                  itemRefs.current.delete(problem.id);
+          filteredProblems.map((problem) => {
+            const isCompleted = completedProblemIds.has(problem.id);
+
+            return (
+              <button
+                className={
+                  selectedProblem?.id === problem.id
+                    ? "problem-list__item active"
+                    : "problem-list__item"
                 }
-              }}
-              type="button"
-            >
-              <span className="problem-list__number">
-                {getProblemNumber(problem)}
-              </span>
-              <span className="problem-list__content">
-                <span className="problem-list__title">{problem.title}</span>
-                <span className="problem-list__meta">
-                  <span
-                    className={`difficulty-text difficulty--${problem.difficulty.toLowerCase()}`}
-                  >
-                    {problem.difficulty}
-                  </span>
-                  <span className="category--text">
-                    {problem.category}
+                key={problem.id}
+                onClick={() => onSelectProblem(problem)}
+                ref={(node) => {
+                  if (node) {
+                    itemRefs.current.set(problem.id, node);
+                  } else {
+                    itemRefs.current.delete(problem.id);
+                  }
+                }}
+                type="button"
+              >
+                <span className="problem-list__number">
+                  {getProblemNumber(problem)}
+                </span>
+                <span className="problem-list__content">
+                  <span className="problem-list__title">{problem.title}</span>
+                  <span className="problem-list__meta">
+                    <span
+                      className={`difficulty-text difficulty--${problem.difficulty.toLowerCase()}`}
+                    >
+                      {problem.difficulty}
+                    </span>
+                    <span className="category--text">
+                      {problem.category}
+                    </span>
                   </span>
                 </span>
-              </span>
-            </button>
-          ))
+                <span className="problem-list__complete-slot">
+                  {isCompleted ? (
+                    <span
+                      aria-label="Completed"
+                      className="problem-list__complete-icon"
+                      title="Completed"
+                    >
+                      ✓
+                    </span>
+                  ) : null}
+                </span>
+              </button>
+            );
+          })
         ) : (
           <div className="problem-list-empty" role="status">
             <strong>No matches</strong>

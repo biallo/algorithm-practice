@@ -2,6 +2,8 @@ import type { PracticeProblem } from "../data/problemTypes";
 import { CodeTabs } from "./CodeTabs";
 
 type ProblemDetailProps = {
+  isCompleted: boolean;
+  onMarkComplete: () => void;
   problem: PracticeProblem;
 };
 
@@ -28,7 +30,11 @@ function renderPromptText(text: string) {
   ));
 }
 
-export function ProblemDetail({ problem }: ProblemDetailProps) {
+export function ProblemDetail({
+  isCompleted,
+  onMarkComplete,
+  problem,
+}: ProblemDetailProps) {
   return (
     <main className="detail" aria-labelledby="problem-title">
       <div className="detail__head">
@@ -92,6 +98,22 @@ export function ProblemDetail({ problem }: ProblemDetailProps) {
       {problem.solutions.length > 0 ? (
         <CodeTabs solutions={problem.solutions} />
       ) : null}
+
+      <div className="completion-action">
+        <button
+          className={
+            isCompleted
+              ? "complete-button complete-button--completed"
+              : "complete-button"
+          }
+          disabled={isCompleted}
+          onClick={onMarkComplete}
+          type="button"
+        >
+          {isCompleted ? "Completed" : "Mark Complete"}
+        </button>
+      </div>
+      
     </main>
   );
 }

@@ -224,3 +224,39 @@
 .empty-state p:not(.eyebrow) {
   color: var(--muted);
 }
+
+.completion-action {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 24px;
+}
+
+.complete-button {
+  background: #59a6fd;
+  border: 1px solid #59a6fd;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1;
+  min-height: 38px;
+  padding: 0 14px;
+}
+
+.complete-button:hover {
+  background: #3292ff;
+  border-color: #3292ff;
+}
+
+.complete-button:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.28);
+  outline-offset: 2px;
+}
+
+.complete-button--completed,
+.complete-button--completed:hover {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+  color: #6b7280;
+  cursor: default;
+}

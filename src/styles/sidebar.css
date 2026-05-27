@@ -123,7 +123,7 @@
   color: var(--ink);
   display: grid;
   gap: 10px;
-  grid-template-columns: 28px minmax(0, 1fr);
+  grid-template-columns: 28px minmax(0, 1fr) 20px;
   min-height: fit-content;
   overflow: hidden;
   padding: 12px 14px;
@@ -208,4 +208,24 @@
   font-size: 0.74rem;
   font-weight: 800;
   color: var(--indigo);
+}
+
+.problem-list__complete-slot {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.problem-list__complete-icon {
+  align-items: center;
+  background: var(--blue);
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-grid;
+  font-size: 0.78rem;
+  font-weight: 900;
+  height: 18px;
+  justify-content: center;
+  line-height: 1;
+  width: 18px;
 }
