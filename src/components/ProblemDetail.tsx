@@ -46,6 +46,10 @@ export function ProblemDetail({
             {problem.difficulty}
           </span>
           <span className="badge badge--category">{problem.category}</span>
+          { isCompleted
+            ? <span className="badge badge--completed">Completed</span>
+            : null
+          }
         </div>
       </div>
 

@@ -54,6 +54,11 @@
   color: var(--indigo);
 }
 
+.badge--completed {
+  background: var(--blue);
+  color: #ffffff;
+}
+
 .detail__metrics {
   color: var(--muted);
   display: flex;
