@@ -12,9 +12,17 @@ const encodeAndDecodeStrings: PracticeProblem = {
   examples: [
     {
       input: 'strs = ["lint", "code", "love", "you"]',
-      output: '["lint", "code", "love", "you"]',
+      output:
+        'encode(strs) = "4#lint4#code4#love3#you"\ndecode("4#lint4#code4#love3#you") = ["lint", "code", "love", "you"]',
       explanation:
-        'Decoding the encoded string restores the original array exactly.',
+        'Each string is stored as length + "#" + content, so decode can read the next length before slicing the exact string.',
+    },
+    {
+      input: 'strs = ["", "a#b", "12"]',
+      output:
+        'encode(strs) = "0#3#a#b2#12"\ndecode("0#3#a#b2#12") = ["", "a#b", "12"]',
+      explanation:
+        'The length prefix keeps empty strings and delimiter characters inside a string unambiguous.',
     },
   ],
   points: [
