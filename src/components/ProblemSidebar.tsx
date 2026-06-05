@@ -44,10 +44,13 @@ export function ProblemSidebar({
 
     const listRect = list.getBoundingClientRect();
     const itemRect = selectedItem.getBoundingClientRect();
-    const isVisible =
-      itemRect.bottom > listRect.top && itemRect.top < listRect.bottom;
+    const isFullyVisible =
+      itemRect.top >= listRect.top &&
+      itemRect.bottom <= listRect.bottom &&
+      itemRect.left >= listRect.left &&
+      itemRect.right <= listRect.right;
 
-    if (isVisible) {
+    if (isFullyVisible) {
       return;
     }
 

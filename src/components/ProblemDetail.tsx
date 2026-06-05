@@ -1,3 +1,4 @@
+import { useLayoutEffect, useRef } from "react";
 import type { PracticeProblem } from "../data/problemTypes";
 import { CodeTabs } from "./CodeTabs";
 
@@ -35,8 +36,14 @@ export function ProblemDetail({
   onMarkComplete,
   problem,
 }: ProblemDetailProps) {
+  const detailRef = useRef<HTMLElement>(null);
+
+  useLayoutEffect(() => {
+    detailRef.current?.scrollTo({ left: 0, top: 0 });
+  }, [problem.id]);
+
   return (
-    <main className="detail" aria-labelledby="problem-title">
+    <main className="detail" ref={detailRef} aria-labelledby="problem-title">
       <div className="detail__head">
         <div>
           <h1 id="problem-title">{problem.title}</h1>
