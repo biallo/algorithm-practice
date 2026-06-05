@@ -13,8 +13,9 @@ const lowestCommonAncestorOfABinaryTree: PracticeProblem = {
     {
       input:
         'root = { val: 3, left: { val: 5, left: { val: 6, left: null, right: null }, right: { val: 2, left: { val: 7, left: null, right: null }, right: { val: 4, left: null, right: null } } }, right: { val: 1, left: { val: 0, left: null, right: null }, right: { val: 8, left: null, right: null } } }, p = root.left, q = root.right',
-      output: '3',
-      explanation: 'Node 3 is the lowest node that contains both 5 and 1.',
+      output: 'root',
+      explanation:
+        'The returned node is `root`, whose value is 3, because it is the lowest node that contains both 5 and 1.',
     },
   ],
   points: [

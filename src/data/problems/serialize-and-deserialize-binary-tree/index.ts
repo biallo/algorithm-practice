@@ -13,9 +13,9 @@ const serializeAndDeserializeBinaryTree: PracticeProblem = {
     {
       input:
         'root = { val: 1, left: { val: 2, left: null, right: null }, right: { val: 3, left: { val: 4, left: null, right: null }, right: { val: 5, left: null, right: null } } }',
-      output: '[1,2,3,null,null,4,5]',
+      output: 'serialize(root) = "1,2,#,#,3,4,#,#,5,#,#"',
       explanation:
-        'Deserializing the serialized string rebuilds the same tree.',
+        'Deserializing the serialized string rebuilds the same tree object structure.',
     },
   ],
   points: [
