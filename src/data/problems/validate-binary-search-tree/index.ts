@@ -1,6 +1,9 @@
 import type { PracticeProblem } from '../../problemTypes';
+import { formatTreeAssignment, treeNode } from '../../treeExamples';
 import javascript from './solutions/recursive-bounds.js?raw';
 import typescript from './solutions/recursive-bounds.ts?raw';
+
+const exampleRoot = treeNode(2, treeNode(1), treeNode(3));
 
 const validateBinarySearchTree: PracticeProblem = {
   id: 'validate-binary-search-tree',
@@ -11,8 +14,7 @@ const validateBinarySearchTree: PracticeProblem = {
     'Given the `root` of a binary tree, determine whether it is a valid binary search tree.\n\nEvery node in the left subtree must be strictly smaller than the current node, and every node in the right subtree must be strictly larger.',
   examples: [
     {
-      input:
-        'root = { val: 2, left: { val: 1, left: null, right: null }, right: { val: 3, left: null, right: null } }',
+      input: formatTreeAssignment('root', exampleRoot),
       output: 'true',
       explanation:
         'The left value is smaller than 2 and the right value is larger than 2.',

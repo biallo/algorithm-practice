@@ -165,7 +165,9 @@
   font-size: 0.86rem;
   line-height: 1.55;
   margin: 0;
-  overflow-wrap: anywhere;
+  overflow-x: auto;
+  overflow-wrap: normal;
+  white-space: pre-wrap;
 }
 
 .requirements-block {

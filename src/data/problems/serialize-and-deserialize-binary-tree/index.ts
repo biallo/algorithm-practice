@@ -1,6 +1,13 @@
 import type { PracticeProblem } from '../../problemTypes';
+import { formatTreeAssignment, treeNode } from '../../treeExamples';
 import javascript from './solutions/preorder-with-null-markers.js?raw';
 import typescript from './solutions/preorder-with-null-markers.ts?raw';
+
+const exampleRoot = treeNode(
+  1,
+  treeNode(2),
+  treeNode(3, treeNode(4), treeNode(5)),
+);
 
 const serializeAndDeserializeBinaryTree: PracticeProblem = {
   id: 'serialize-and-deserialize-binary-tree',
@@ -11,8 +18,7 @@ const serializeAndDeserializeBinaryTree: PracticeProblem = {
     'Design an algorithm to serialize and deserialize a binary tree.\n\nSerialization converts the tree into a string, and deserialization reconstructs the original tree structure from that string.',
   examples: [
     {
-      input:
-        'root = { val: 1, left: { val: 2, left: null, right: null }, right: { val: 3, left: { val: 4, left: null, right: null }, right: { val: 5, left: null, right: null } } }',
+      input: formatTreeAssignment('root', exampleRoot),
       output: 'serialize(root) = "1,2,#,#,3,4,#,#,5,#,#"',
       explanation:
         'Deserializing the serialized string rebuilds the same tree object structure.',

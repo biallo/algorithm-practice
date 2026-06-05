@@ -1,6 +1,14 @@
 import type { PracticeProblem } from '../../problemTypes';
+import {
+  formatExampleParts,
+  formatTreeAssignment,
+  treeNode,
+} from '../../treeExamples';
 import javascript from './solutions/recursive-compare.js?raw';
 import typescript from './solutions/recursive-compare.ts?raw';
+
+const exampleP = treeNode(1, treeNode(2), treeNode(3));
+const exampleQ = treeNode(1, treeNode(2), treeNode(3));
 
 const sameTree: PracticeProblem = {
   id: 'same-tree',
@@ -11,8 +19,10 @@ const sameTree: PracticeProblem = {
     'Given the roots of two binary trees `p` and `q`, determine whether they are the same tree.\n\nTwo trees are the same when their structure is identical and every corresponding node has the same value.',
   examples: [
     {
-      input:
-        'p = { val: 1, left: { val: 2, left: null, right: null }, right: { val: 3, left: null, right: null } }, q = { val: 1, left: { val: 2, left: null, right: null }, right: { val: 3, left: null, right: null } }',
+      input: formatExampleParts(
+        formatTreeAssignment('p', exampleP),
+        formatTreeAssignment('q', exampleQ),
+      ),
       output: 'true',
       explanation: 'Both trees have the same shape and values.',
     },
