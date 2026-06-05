@@ -11,7 +11,8 @@ const invertBinaryTree: PracticeProblem = {
     'Given the `root` of a binary tree, invert the tree and return its root.\n\nInverting a tree means every node swaps its left and right children.',
   examples: [
     {
-      input: 'root = [4,2,7,1,3,6,9]',
+      input:
+        'root = { val: 4, left: { val: 2, left: { val: 1, left: null, right: null }, right: { val: 3, left: null, right: null } }, right: { val: 7, left: { val: 6, left: null, right: null }, right: { val: 9, left: null, right: null } } }',
       output: '[4,7,2,9,6,3,1]',
       explanation: 'Every left child and right child pair is swapped.',
     },

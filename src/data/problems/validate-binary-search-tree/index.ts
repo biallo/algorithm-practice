@@ -11,7 +11,8 @@ const validateBinarySearchTree: PracticeProblem = {
     'Given the `root` of a binary tree, determine whether it is a valid binary search tree.\n\nEvery node in the left subtree must be strictly smaller than the current node, and every node in the right subtree must be strictly larger.',
   examples: [
     {
-      input: 'root = [2,1,3]',
+      input:
+        'root = { val: 2, left: { val: 1, left: null, right: null }, right: { val: 3, left: null, right: null } }',
       output: 'true',
       explanation:
         'The left value is smaller than 2 and the right value is larger than 2.',

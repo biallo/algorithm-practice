@@ -11,7 +11,8 @@ const sameTree: PracticeProblem = {
     'Given the roots of two binary trees `p` and `q`, determine whether they are the same tree.\n\nTwo trees are the same when their structure is identical and every corresponding node has the same value.',
   examples: [
     {
-      input: 'p = [1,2,3], q = [1,2,3]',
+      input:
+        'p = { val: 1, left: { val: 2, left: null, right: null }, right: { val: 3, left: null, right: null } }, q = { val: 1, left: { val: 2, left: null, right: null }, right: { val: 3, left: null, right: null } }',
       output: 'true',
       explanation: 'Both trees have the same shape and values.',
     },

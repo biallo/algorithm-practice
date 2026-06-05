@@ -11,7 +11,8 @@ const binaryTreeInorderTraversal: PracticeProblem = {
     'Given the `root` of a binary tree, return the inorder traversal of its node values.\n\nInorder traversal visits the left subtree, then the current node, then the right subtree.',
   examples: [
     {
-      input: 'root = [1,null,2,3]',
+      input:
+        'root = { val: 1, left: null, right: { val: 2, left: { val: 3, left: null, right: null }, right: null } }',
       output: '[1,3,2]',
       explanation: 'Visit 1, then the left child of 2, then 2.',
     },

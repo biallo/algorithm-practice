@@ -11,7 +11,8 @@ const subtreeOfAnotherTree: PracticeProblem = {
     'Given the roots of two binary trees `root` and `subRoot`, return whether `subRoot` is a subtree of `root`.\n\nA subtree must match a node in `root` and include all descendants below that node.',
   examples: [
     {
-      input: 'root = [3,4,5,1,2], subRoot = [4,1,2]',
+      input:
+        'root = { val: 3, left: { val: 4, left: { val: 1, left: null, right: null }, right: { val: 2, left: null, right: null } }, right: { val: 5, left: null, right: null } }, subRoot = { val: 4, left: { val: 1, left: null, right: null }, right: { val: 2, left: null, right: null } }',
       output: 'true',
       explanation: 'The subtree rooted at value 4 matches `subRoot`.',
     },

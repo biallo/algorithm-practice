@@ -11,7 +11,8 @@ const binaryTreeLevelOrderTraversal: PracticeProblem = {
     'Given the `root` of a binary tree, return the level order traversal of its node values.\n\nLevel order traversal visits nodes from left to right, one depth level at a time.',
   examples: [
     {
-      input: 'root = [3,9,20,null,null,15,7]',
+      input:
+        'root = { val: 3, left: { val: 9, left: null, right: null }, right: { val: 20, left: { val: 15, left: null, right: null }, right: { val: 7, left: null, right: null } } }',
       output: '[[3],[9,20],[15,7]]',
       explanation: 'The output groups nodes by depth.',
     },

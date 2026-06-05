@@ -11,7 +11,8 @@ const lowestCommonAncestorOfABinaryTree: PracticeProblem = {
     'Given the `root` of a binary tree and two nodes `p` and `q`, return their lowest common ancestor.\n\nThe lowest common ancestor is the deepest node that has both `p` and `q` as descendants, where a node can be a descendant of itself.',
   examples: [
     {
-      input: 'root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1',
+      input:
+        'root = { val: 3, left: { val: 5, left: { val: 6, left: null, right: null }, right: { val: 2, left: { val: 7, left: null, right: null }, right: { val: 4, left: null, right: null } } }, right: { val: 1, left: { val: 0, left: null, right: null }, right: { val: 8, left: null, right: null } } }, p = root.left, q = root.right',
       output: '3',
       explanation: 'Node 3 is the lowest node that contains both 5 and 1.',
     },

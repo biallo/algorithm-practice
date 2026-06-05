@@ -11,7 +11,8 @@ const serializeAndDeserializeBinaryTree: PracticeProblem = {
     'Design an algorithm to serialize and deserialize a binary tree.\n\nSerialization converts the tree into a string, and deserialization reconstructs the original tree structure from that string.',
   examples: [
     {
-      input: 'root = [1,2,3,null,null,4,5]',
+      input:
+        'root = { val: 1, left: { val: 2, left: null, right: null }, right: { val: 3, left: { val: 4, left: null, right: null }, right: { val: 5, left: null, right: null } } }',
       output: '[1,2,3,null,null,4,5]',
       explanation:
         'Deserializing the serialized string rebuilds the same tree.',

@@ -11,9 +11,11 @@ const maximumDepthOfBinaryTree: PracticeProblem = {
     'Given the `root` of a binary tree, return its maximum depth.\n\nThe maximum depth is the number of nodes along the longest path from the root node down to a leaf node.',
   examples: [
     {
-      input: 'root = [3,9,20,null,null,15,7]',
+      input:
+        'root = { val: 3, left: { val: 9, left: null, right: null }, right: { val: 20, left: { val: 15, left: null, right: null }, right: { val: 7, left: null, right: null } } }',
       output: '3',
-      explanation: 'The longest root-to-leaf path has 3 nodes.',
+      explanation:
+        'This tree is commonly serialized as [3,9,20,null,null,15,7]. The longest root-to-leaf path has 3 nodes.',
     },
   ],
   points: [
